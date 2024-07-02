@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Goals for the Next 2 Years</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        setInterval(() => {
+        const now = new Date();
+
+        const optionForTime = {
+            hour: "numeric",
+            minute: "numeric",
+            second: "numeric",
+            hour12: true, 
+            timeZone: "UTC",
+        };
+        const currentUTCTime = now.toLocaleTimeString("en-US", optionForTime) + " UTC";
+
+        const optionForDays = {
+            weekday: "long",
+            timeZone: "UTC",
+        };
+       
+        const currentUTCDate = now.toLocaleDateString("en-US", optionForDays);
+
+        document.querySelector("[data-testid='currentDay']").innerText =
+            currentUTCDate;
+        document.querySelector("[data-testid='currentTimeUTC']").innerText =
+            currentUTCTime;
+        }, 1000);
+    </script>
+</head>
+<body>
+    <header>
+        <h1><span data-testid="slackDisplayName">UFEDO</span>'s TWO YEARS TECH GOALS</h1>
+        <p>
+            As a dedicated tech enthusiast, I've established ambitious goals to enhance my skills<br>
+            and broaden my knowledge over the next two years. Join me on this thrilling journey as<br>
+            I outline my plans to evolve into a more versatile developer.
+        </p>
+    </header>
+    <main>
+        <div>
+            <div>
+                <p>Current Time:<span data-testid='currentTimeUTC'></span></p>
+                <p>Day:<span data-testid='currentDay'></span></p>
+            </div>
+            <section class="goals">
+                <div class="goal">
+                    <h2>Maintain advanced frontend skills</h2>
+                    <ul>
+                        <li>I aim to enhance my skills in contemporary frameworks such as React, Angular, or Vue.js.</li>
+                        <li>Master advanced CSS techniques like CSS Grid, Flexbox, and animations.</li>
+                        <li>Develop expertise in responsive web design, accessibility, and performance optimization</li>
+                    </ul>
+                </div>
+                <div class="goal">
+                    <h2>Become a full-stack developer</h2>
+                    <ul>
+                        <li>Expand my skills in both frontend and backend development</a></li>
+                        <li>Master popular framworks and technologies on both sides of the stack</li>
+                    </ul>
+                </div>
+                <div class="goal">
+                    <h2>Explore emerging technologies</h2>
+                    <ul>
+                        <li>Learn about emerging technologies like PWA's and AV/ar development</li>
+                        <li>Experiment new tools like webpack or ES modules</li>
+                        <li>Stay up to date with the latest browser features and HTML/CSS/JS standards</li>
+                    </ul>
+                </div>
+               
+            </section>
+        </div>
+        
+        <section class="slack-info">
+            <div >
+                <img src="./asset/Sarah.jpg" alt="Slack Profile Picture"  data-testid="slackProfilePicture">
+                <p data-testid="slackEmail"><strong>Email Address:</strong>ikesarah5@.com</p>
+            </div>
+        </section>
+        <section class="links">
+            <ul>
+                <li><a href="https://hng.tech/learn" target="_blank" rel="noopener noreferrer" data-testid="hngLink">Learn with HNG</a></li>
+                <li><a href="https://keyword.dog" target="_blank" rel="noopener noreferrer" data-testid="keywordLink">Keyword Dog</a></li>
+                <li><a href="https://scrapeanyweb.site" target="_blank" rel="noopener noreferrer" data-testid="scrapeanywebLink">Scrape Any Web</a></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
